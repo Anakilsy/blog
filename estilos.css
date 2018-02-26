@@ -1,12 +1,16 @@
-/* font-family: 'Molle', cursive; */
-@import url{'https://fonts.googleapis.com/css?family=Molle:400i" rel="stylesheet'}
+/* font-family: 'Berkshire Swash', cursive; */
+@import url{'https://fonts.googleapis.com/css?family=Berkshire+Swash'}
 /*cabecera*/
 .cabecera{width: 100%; height: 115px; border-bottom: solid 5px #00b38f;}
 .contenidocabecera{width: 1024px; height:115px; float: left; position: relative; left: 50%; margin-left: -512px;}
+.logo{float: left; position: relative; width: 727px; height: 115px; background-image: url(imagenes/comunes/mari.jpg);
+ background-repeat: no-repeat; left: 50%; margin-left:-355px; background-size: contain;}
+ h1{float: left; position: relative; font-family: 'Berkshire Swash', cursive; color: #00b38f; font-size: 3rem; font-weight: 500; margin-top: 7px;}
 /*cuerpo*/
-.fondo{width: 100%; float: left; position: relative; background-image:_url(imagenes/comunes/fondo.jpg);
-background-repeat: repeat; background-position: center; background-size: contain; }
-.contenido{}
+.fondo{width: 100%; float: left; position: relative; background-image: url(imagenes/comunes/fondo.jpg);
+background-repeat: repeat; background-position: center; background-size: contain;}
+.contenido{width: 1024px; height: auto; float: left; position: relative; left: 50%;
+margin-left: -512px; padding-top: 30px; padding-bottom: 30px;}
 /*pie*/
 .pie {width: 100%; height: 115px; border-top: solid 15px #009999;}
 .contenidopie{}
