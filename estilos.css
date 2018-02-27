@@ -57,3 +57,23 @@ font-weight: 300; text-align: justify; overflow: hidden; margin-top: 8px;}
 .aje{float: left; position: relative; width: 116px; margin-left: 28px; margin-top:0px; }
 
 .europeo{float: left; position: relative; width: 108px; margin-left: 36px; margin-top: 11px;}
+ 
+ 
+/* entrada ampliada*/
+ 
+.fondoentrada{width: 100%; float: left; position: relative; background-image: url(imagenes/comunes/clari.jpg);
+background-repeat: repeat;}
+.contenidoentrada{width: 1024px; height: auto; float: left; position: relative; left: 50%;
+margin-left: -512px; padding: 30px; background-color: #fff; margin-bottom: 65px; margin-top:65px;}
+.volver{ float: left; position: relative; width: 99px; background-color: #00b38f; font-family: 'Berkshire Swash',cursive;
+  font-size: 1.4rem; font-weight: 800; text-align: justify; overflow: hidden; border: none; border-radius: 0% 50% 50% 50% ;
+  -webkit-box-shadow: 1px 7px 50px 9px #009999; box-shadow: 1px 7px 50px 9px #009999; margin-left: -55px; margin-top: -42px; padding-left: 10px;
+  text-shadow: 3px 3px 5px #009999; padding-top: 8px; cursor: pointer; text-decoration: none;}
+.volver:hover{background-color: #009999; text-shadow: 3px 3px 5px #00b38f;
+   -webkit-box-shadow: 1px 7px 11px 9px #2CE6CD; box-shadow: 1px 7px 11px 9px #2CE6CD;}
+
+
+
+
+
+
