@@ -1,6 +1,3 @@
-<?php
-include_once('funciones.php');
-?>
 
 
 <!DOCTYPE html>
@@ -8,61 +5,42 @@ include_once('funciones.php');
 <html>
 <head>
     <title>Blog</title>
-    <link href="estilos.css" rel="stylesheet" type="text/css"/>
+    <link href="estilosadministrador.css" rel="stylesheet" type="text/css"/>
 </head>
 
 <body>
 <div class="cabecera">
     <div class="contenidocabecera">
         <a href="http://www.ajeclm.com/" target="_blank" class="logo"></a>
-        <a href="index.php" ><h1>creador de marionetas</h1></a>
+        <a href="index.php" ><h1>administrador de blog</h1></a>
     </div>
     
 </div>
 <div class="fondo">
     <div class="contenido">
-         <?php
- // conectaamos con la base de datos
- $link = mysql_connect('localhost','ejeblog','ejeblogpsw');
- mysql_select_db('blog');
- 
- //seleccionamos las entradas
- $query ="SELECT * FROM entradas ORDER BY fecha DESC";
- $queryEntradas = mysql_query($query);
- 
-while($entrada = mysql_fetch_object($queryEntradas)){
-    //recogemos sus valores
-$id = $entrada->id_entrada;
-$fechasql = $entrada->fecha;
-$imagen = $entrada->imagen;
-$descripcion = $entrada->descripcion_img;
-$titulo = $entrada->titulo;
-$texto = $entrada->texto;
- 
- 
-?>
+   <h2 class="titular"> CREAR NUEVA ENTRADA</h2>
       <div class="entrada">
+         <form action="publicar.php" method="post" enctype="multinpart/form-data">
+           </form>
         <div class="contenedorimagen">
-             <img class="imagen" src="imagenes/<?php echo $imagen; ?>"
+             <img class="imagen" src="imagenes/comunes/iconoimagen.png"
                      alt="<?php echo $descripcion;?>" title="<?php echo $descripcion;?>"/>
+                     <input class="descripcion" required type="text" name="descripcion" placeholder="describe brevemente la imagen"/>
+                     <input class="examinar" required type="file" name="imagen"/>
             </div>
             <div class="informacion">
-                <p class="fecha"><?php echo fechaTxt($fechasql); ?></p>
-                <h2 class="titulo"><?php echo $titulo; ?></h2>
-                <p class="texto"><?php echo $texto; ?></p>
+              <input class="fecha" required type="date" name="fecha">
+             <textarea class="titulo" required  name="titulo" placeholder="escribe un titulo"></textarea>
+               <textarea  class="texto" required  name="texto" placeholder="escribe un texto"></textarea>
                 <form action="entrada.php" method="post" enctype="multipart/form-data">
-                    <input type="number" name="numero" value="<?php echo $id; ?>" style="display: none;"/>
-                    <input type="submit" class="boton leer" value="LEER MAS"/>
+                 
+                    <input type="submit" class="boton publ" value="publicar"/>
                 </form>
             </div>
         </div>
         
- <?php
- };
- mysql_close($link);
-?>
-           <form action="entrada.php" method="post" enctype="multinpart/form-data">
-           </form>
+
+          
         </div>
       </div>  
     </div>
